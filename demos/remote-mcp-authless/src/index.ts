@@ -25,7 +25,7 @@ function createServer() {
     },
     async ({ query }) => {
       const apiKey = env.PIXABAY_API_KEY;
-
+console.log("keys:", Object.keys(env), "has:", !!env.PIXABAY_API_KEY);
       if (!apiKey) {
         return {
           content: [{
